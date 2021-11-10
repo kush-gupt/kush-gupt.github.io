@@ -1,12 +1,11 @@
 import React from 'react';
-import { render } from 'react-dom';
 import styled from 'styled-components';
 import { useEffect } from 'react';
 
 import useRainbow from './use-rainbow.hook';
 
 var kate = true;
-var name = 'Kate';
+//var name = 'Kate';
 
 
 const MagicRainbowButton = ({
@@ -28,10 +27,12 @@ const MagicRainbowButton = ({
 
   const colorKeys = Object.keys(colors);
 
+  React.useEffect(() => {
+    window.addEventListener('click', onClick); 
+  }, []);
+
   return (
-    <ButtonElem onClick={  useEffect(() => {
-        onClick();
-    }, [])}
+    <ButtonElem
       {...delegated}
       style={{
         ...colors,
@@ -50,24 +51,24 @@ const MagicRainbowButton = ({
         `,
       }}
     >
-      { kate ? 'Kate':'Kush'}
+      {kate ? "Kate" : "Kush"}
     </ButtonElem>
   );
 };
 
-function changePerson(){
-    if (kate === true){
-      name = 'Kush';
-      kate = false;
-      console.log(name);
-      return;
-    } else {
-        name = 'Kate';
-        kate = true;
-        console.log(name);
-        return;
-    }
-  }
+// function changePerson(){
+//     if (kate === true){
+//       name = 'Kush';
+//       kate = false;
+//       console.log(name);
+//       return;
+//     } else {
+//         name = 'Kate';
+//         kate = true;
+//         console.log(name);
+//         return;
+//     }
+//   }
 const ButtonElem = styled.button`
   position: relative;
   border: none;

@@ -2,9 +2,9 @@ import './App.css';
 import MagicRainbowButton from './MagicRainbowButton.js'
 import styled from 'styled-components';
 import Center from './Center';
-import { useEffect } from 'react';
-
 //Definitions
+
+var kate = true;
 
 const BREAKPOINT_SIZES = {
  xs: 320,
@@ -54,8 +54,9 @@ function App() {
       {/* <Ripples>
         <button style={{height: '100%', width : '100%' , position : 'fixed' , top : '0' , left : '0'}}> Ripple Button </button>
       </Ripples> */}
+
       <Wrapper>
-        <WrappedButton></WrappedButton>
+        <WrappedButton>{kate ? "Kate" : "Kush"}</WrappedButton>
       </Wrapper>
     </div>
   );
