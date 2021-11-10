@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Guptanator-boop/Guptanator-boop.github.io/static/css/main.92546c6b.chunk.css",
-    "main.js": "/Guptanator-boop/Guptanator-boop.github.io/static/js/main.b36757a3.chunk.js",
-    "main.js.map": "/Guptanator-boop/Guptanator-boop.github.io/static/js/main.b36757a3.chunk.js.map",
-    "runtime-main.js": "/Guptanator-boop/Guptanator-boop.github.io/static/js/runtime-main.dba40f3c.js",
-    "runtime-main.js.map": "/Guptanator-boop/Guptanator-boop.github.io/static/js/runtime-main.dba40f3c.js.map",
-    "static/js/2.f1253822.chunk.js": "/Guptanator-boop/Guptanator-boop.github.io/static/js/2.f1253822.chunk.js",
-    "static/js/2.f1253822.chunk.js.map": "/Guptanator-boop/Guptanator-boop.github.io/static/js/2.f1253822.chunk.js.map",
-    "static/js/3.326adfa0.chunk.js": "/Guptanator-boop/Guptanator-boop.github.io/static/js/3.326adfa0.chunk.js",
-    "static/js/3.326adfa0.chunk.js.map": "/Guptanator-boop/Guptanator-boop.github.io/static/js/3.326adfa0.chunk.js.map",
-    "index.html": "/Guptanator-boop/Guptanator-boop.github.io/index.html",
-    "static/css/main.92546c6b.chunk.css.map": "/Guptanator-boop/Guptanator-boop.github.io/static/css/main.92546c6b.chunk.css.map",
-    "static/js/2.f1253822.chunk.js.LICENSE.txt": "/Guptanator-boop/Guptanator-boop.github.io/static/js/2.f1253822.chunk.js.LICENSE.txt"
+    "main.css": "/Guptanator-boop/Guptanator-boop.github.io/pokate/static/css/main.92546c6b.chunk.css",
+    "main.js": "/Guptanator-boop/Guptanator-boop.github.io/pokate/static/js/main.b36757a3.chunk.js",
+    "main.js.map": "/Guptanator-boop/Guptanator-boop.github.io/pokate/static/js/main.b36757a3.chunk.js.map",
+    "runtime-main.js": "/Guptanator-boop/Guptanator-boop.github.io/pokate/static/js/runtime-main.b926e637.js",
+    "runtime-main.js.map": "/Guptanator-boop/Guptanator-boop.github.io/pokate/static/js/runtime-main.b926e637.js.map",
+    "static/js/2.7853df10.chunk.js": "/Guptanator-boop/Guptanator-boop.github.io/pokate/static/js/2.7853df10.chunk.js",
+    "static/js/2.7853df10.chunk.js.map": "/Guptanator-boop/Guptanator-boop.github.io/pokate/static/js/2.7853df10.chunk.js.map",
+    "static/js/3.326adfa0.chunk.js": "/Guptanator-boop/Guptanator-boop.github.io/pokate/static/js/3.326adfa0.chunk.js",
+    "static/js/3.326adfa0.chunk.js.map": "/Guptanator-boop/Guptanator-boop.github.io/pokate/static/js/3.326adfa0.chunk.js.map",
+    "index.html": "/Guptanator-boop/Guptanator-boop.github.io/pokate/index.html",
+    "static/css/main.92546c6b.chunk.css.map": "/Guptanator-boop/Guptanator-boop.github.io/pokate/static/css/main.92546c6b.chunk.css.map",
+    "static/js/2.7853df10.chunk.js.LICENSE.txt": "/Guptanator-boop/Guptanator-boop.github.io/pokate/static/js/2.7853df10.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.dba40f3c.js",
-    "static/js/2.f1253822.chunk.js",
+    "static/js/runtime-main.b926e637.js",
+    "static/js/2.7853df10.chunk.js",
     "static/css/main.92546c6b.chunk.css",
     "static/js/main.b36757a3.chunk.js"
   ]
