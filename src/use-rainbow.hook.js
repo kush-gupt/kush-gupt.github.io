@@ -56,7 +56,7 @@ const useRainbow = ({ intervalDelay = 2000 }) => {
         inherits: false,
       });
     });
-  }, [WINDOW_SIZE, isEnabled]);
+  }, [uniqueId, isEnabled]);
 
   const intervalCount = useIncrementingNumber(intervalDelay);
 

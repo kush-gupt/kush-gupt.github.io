@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useEffect } from 'react';
-
 import useRainbow from './use-rainbow.hook';
 
 var kate = true;
