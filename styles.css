@@ -18,7 +18,7 @@ html, body { height: 100%; }
 
 body {
   background: #070d10;
-  font-family: "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
+  font-family: "DM Mono", "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
   display: flex;
   align-items: center;
   justify-content: center;
