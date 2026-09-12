@@ -177,7 +177,7 @@
     quit: () => [["logout… just kidding. there's no escape.", "dim"], ["", ""]],
   };
 
-  const CHIPS = ["whoami", "experience", "achievements", "certs", "projects", "personal", "contact", "help"];
+  const CHIPS = ["experience", "achievements", "certs", "projects", "personal", "contact", "help"];
 
   function run(raw) {
     const cmd = raw.trim().toLowerCase();
