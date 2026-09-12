@@ -120,7 +120,7 @@
     ],
     achievements: () => [
       ["talks & stages", "amber"],
-      ["  Flight Software Workshop: Edge AI inferencing (llama.cpp vs vLLM)", "", "https://flightsoftware.org/"],
+      ["  Flight Software Workshop: Edge AI inferencing (llama.cpp vs vLLM)", "", "https://youtu.be/G1w6iS_vsZE"],
       ["  HPSF Conference 2026: bootc + OpenCHAMI", "", "https://github.com/kush-gupt/oc-image-mode"],
       ["  CANOPIE-HPC Workshop @ SC25: 'The Convergence of HPC, K8s and AI'", "", "https://github.com/supercontainers/canopie-hpc/blob/main/docs/prev/2025/slides/The-Convergence-of-HPC-K8s-and-AI.pdf"],
       ["  NLIT Summit '25: Open source AI training with OSTI data", ""],
