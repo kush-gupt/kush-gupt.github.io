@@ -14,6 +14,12 @@
   function line(text = "", cls = "") {
     const div = document.createElement("div");
     div.className = "line " + cls;
+    // turn leading spaces into real indent so wrapped lines align under it
+    const m = text.match(/^ +/);
+    if (m) {
+      div.style.paddingLeft = m[0].length + "ch";
+      text = text.slice(m[0].length);
+    }
     div.textContent = text;
     output.appendChild(div);
     scroll();
@@ -78,14 +84,14 @@
     ],
     experience: () => [
       ["[2026–now] Solutions Architect, Databricks", "white"],
-      ["              Pre-sales. Federal Civilian.", "dim"],
-      ["              Data + AI for government agencies. Started July 2026.", "dim"],
+      ["  Pre-sales. Federal Civilian.", "dim"],
+      ["  Data + AI for government agencies. Started July 2026.", "dim"],
       ["", ""],
       ["[2021–2026] Solutions Architect, Red Hat", "white"],
-      ["              First job out of college. Five years.", "dim"],
-      ["              DOE team — HPC, science & space on OpenShift.", "dim"],
-      ["              Helped NASA test AI for deep space missions.", "dim"],
-      ["              National lab supercomputing (LLNL).", "dim"],
+      ["  First job out of college. Five years.", "dim"],
+      ["  DOE team — HPC, science & space on OpenShift.", "dim"],
+      ["  Helped NASA test AI for deep space missions.", "dim"],
+      ["  National lab supercomputing (LLNL).", "dim"],
       ["", ""],
     ],
     achievements: () => [
