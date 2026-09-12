@@ -80,7 +80,7 @@
       ["  stack        tools of the trade", ""],
       ["  personal     the human behind the keyboard", ""],
       ["  contact      how to reach him", ""],
-      ["  theme        toggle green / amber phosphor", ""],
+      ["  theme        toggle databricks / green phosphor", ""],
       ["  clear        wipe the screen", ""],
       ["", ""],
     ],
@@ -203,17 +203,23 @@
 
     if (cmd === "clear") { output.innerHTML = ""; return; }
     if (cmd.startsWith("theme")) {
-      const cur = getComputedStyle(document.documentElement).getPropertyValue("--green").trim();
       const root = document.documentElement.style;
-      if (cur === "#33ff66") {
-        root.setProperty("--green", "#ffb000");
-        root.setProperty("--dim-green", "#8f5f1a");
-        line("phosphor: amber", "amber");
-      } else {
-        root.setProperty("--green", "#33ff66");
-        root.setProperty("--dim-green", "#1a8f3c");
-        line("phosphor: green", "");
-      }
+      const cur = getComputedStyle(document.documentElement).getPropertyValue("--green").trim();
+      const THEMES = {
+        databricks: {
+          "--green": "#FF3621", "--dim-green": "#8f2a1e",
+          "--glow-faint": "rgba(255,54,33,.08)", "--glow": "rgba(255,54,33,.35)",
+          "--glow-mid": "rgba(255,54,33,.2)", "--glow-strong": "rgba(255,54,33,.8)",
+        },
+        green: {
+          "--green": "#33ff66", "--dim-green": "#1a8f3c",
+          "--glow-faint": "rgba(51,255,102,.08)", "--glow": "rgba(51,255,102,.35)",
+          "--glow-mid": "rgba(51,255,102,.2)", "--glow-strong": "rgba(51,255,102,.8)",
+        },
+      };
+      const next = cur === "#FF3621" ? "green" : "databricks";
+      for (const [k, v] of Object.entries(THEMES[next])) root.setProperty(k, v);
+      line("phosphor: " + next, next === "databricks" ? "" : "");
       line("", "");
       return;
     }

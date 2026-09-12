@@ -1,7 +1,11 @@
 :root {
-  --bg: #0a0e0a;
-  --green: #33ff66;
-  --dim-green: #1a8f3c;
+  --bg: #0d0a0a;
+  --green: #FF3621;
+  --dim-green: #8f2a1e;
+  --glow-faint: rgba(255,54,33,.08);
+  --glow: rgba(255,54,33,.35);
+  --glow-mid: rgba(255,54,33,.2);
+  --glow-strong: rgba(255,54,33,.8);
   --amber: #ffb000;
   --white: #e8f5e9;
   --gray: #8a9a8b;
@@ -13,7 +17,7 @@
 html, body { height: 100%; }
 
 body {
-  background: #050705;
+  background: #070505;
   font-family: "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
   display: flex;
   align-items: center;
@@ -37,12 +41,12 @@ body {
   width: min(860px, 100%);
   height: min(640px, calc(100dvh - 32px));
   background: var(--bg);
-  border: 1px solid #1e3a24;
+  border: 1px solid #3a2420;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 0 60px rgba(51,255,102,.08), 0 24px 80px rgba(0,0,0,.7);
+  box-shadow: 0 0 60px var(--glow-faint), 0 24px 80px rgba(0,0,0,.7);
 }
 
 .titlebar {
@@ -50,8 +54,8 @@ body {
   align-items: center;
   gap: 12px;
   padding: 10px 14px;
-  background: #0d130d;
-  border-bottom: 1px solid #1e3a24;
+  background: #120d0d;
+  border-bottom: 1px solid #3a2420;
   user-select: none;
 }
 .lights { display: flex; gap: 8px; }
@@ -69,7 +73,7 @@ body {
   font-size: 14px;
   line-height: 1.55;
   color: var(--green);
-  text-shadow: 0 0 6px rgba(51,255,102,.35);
+  text-shadow: 0 0 6px var(--glow);
   scrollbar-width: thin;
   scrollbar-color: var(--dim-green) transparent;
 }
@@ -103,7 +107,7 @@ body {
   height: 17px;
   background: var(--green);
   animation: blink 1.05s steps(1) infinite;
-  box-shadow: 0 0 8px rgba(51,255,102,.8);
+  box-shadow: 0 0 8px var(--glow-strong);
 }
 @keyframes blink { 50% { opacity: 0; } }
 
@@ -120,8 +124,8 @@ body {
   flex-wrap: wrap;
   gap: 8px;
   padding: 10px 14px;
-  border-top: 1px solid #1e3a24;
-  background: #0d130d;
+  border-top: 1px solid #3a2420;
+  background: #120d0d;
   max-height: 96px;
   overflow-y: auto;
 }
@@ -129,13 +133,13 @@ body {
   font: inherit;
   font-size: 12.5px;
   color: var(--green);
-  background: rgba(51,255,102,.07);
+  background: var(--glow-faint);
   border: 1px solid var(--dim-green);
   border-radius: 20px;
   padding: 6px 12px;
   cursor: pointer;
 }
-.chip:active { background: rgba(51,255,102,.2); }
+.chip:active { background: var(--glow-mid); }
 
 .ascii { color: var(--amber); text-shadow: 0 0 8px rgba(255,176,0,.4); }
 
