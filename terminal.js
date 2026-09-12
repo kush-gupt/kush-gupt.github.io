@@ -11,7 +11,7 @@
 
   const scroll = () => { screen.scrollTop = screen.scrollHeight; };
 
-  function line(text = "", cls = "") {
+  function line(text = "", cls = "", url = "") {
     const div = document.createElement("div");
     div.className = "line " + cls;
     // turn leading spaces into real indent so wrapped lines align under it
@@ -20,7 +20,16 @@
       div.style.paddingLeft = m[0].length + "ch";
       text = text.slice(m[0].length);
     }
-    div.textContent = text;
+    if (url) {
+      const a = document.createElement("a");
+      a.href = url;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = text;
+      div.appendChild(a);
+    } else {
+      div.textContent = text;
+    }
     output.appendChild(div);
     scroll();
     return div;
@@ -98,7 +107,7 @@
       ["talks & stages", "amber"],
       ["  Flight Software Workshop: Edge AI inferencing (llama.cpp vs vLLM)", ""],
       ["  HPSF Conference 2026: bootc + OpenCHAMI", ""],
-      ["  CANOPIE-HPC Workshop @ SC25: presenter", ""],
+      ["  CANOPIE-HPC Workshop @ SC25: 'The Convergence of HPC, K8s and AI'", "", "https://github.com/supercontainers/canopie-hpc/blob/main/docs/prev/2025/slides/The-Convergence-of-HPC-K8s-and-AI.pdf"],
       ["  NLIT Summit '25: Open source AI training with OSTI data", ""],
       ["  Red Hat/Dynatrace/Intel: AI-driven observability webinar", ""],
       ["", ""],
@@ -114,7 +123,6 @@
       ["    model formats: safetensors-only repos, --gguf convert", "dim"],
       ["    caching + CI: HuggingFace/Ollama cache, system tests", "dim"],
       ["    vllm-cpu-arm: own container image for ARM CPUs", "dim"],
-      ["  Minority Programmers Assoc.: organized 2020 #BLM hackathon", ""],
       ["", ""],
     ],
     education: () => [
@@ -196,13 +204,13 @@
     }
     if (cmd.startsWith("cat ")) {
       const target = cmd.slice(4).trim();
-      if (COMMANDS[target]) { COMMANDS[target]().forEach(([t, c]) => line(t, c)); }
+      if (COMMANDS[target]) { COMMANDS[target]().forEach(([t, c, u]) => line(t, c, u)); }
       else line(`cat: ${target}: No such file`, "red");
       line("", "");
       return;
     }
     const fn = COMMANDS[cmd];
-    if (fn) fn().forEach(([t, c]) => line(t, c));
+    if (fn) fn().forEach(([t, c, u]) => line(t, c, u));
     else {
       line(`command not found: ${cmd}`, "red");
       line("type 'help' for available commands", "dim");
@@ -257,7 +265,7 @@
     await typeLines(BOOT, 1400);
     await sleep(250);
     echo("whoami");
-    COMMANDS.whoami().forEach(([t, c]) => line(t, c));
+    COMMANDS.whoami().forEach(([t, c, u]) => line(t, c, u));
     line("type 'help' to poke around", "dim");
     line("", "");
     hiddenInput.focus();

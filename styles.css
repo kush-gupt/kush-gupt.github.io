@@ -85,6 +85,8 @@ body {
 .amber { color: var(--amber); text-shadow: 0 0 6px rgba(255,176,0,.35); }
 .red { color: var(--red); text-shadow: 0 0 6px rgba(255,85,85,.35); }
 .white { color: var(--white); }
+.line a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.line a:active { opacity: .7; }
 
 .input-line {
   display: flex;
