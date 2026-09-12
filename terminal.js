@@ -112,7 +112,7 @@
       ["  Red Hat/Dynatrace/Intel: AI-driven observability webinar", ""],
       ["", ""],
       ["media & writing", "amber"],
-      ["  Federal News Network: 'Building AI that works in government'", ""],
+      ["  Federal News Network: 'Building AI that works in government'", "", "https://federalnewsnetwork.com/federal-insights/2025/09/building-ai-that-works-redhat-shares-how-ecosystem-approach-can-be-the-glue-in-federal-innovation/"],
       ["  Red Hat blog: RHEL in the cloud (PAYG vs BYOS)", "", "https://www.redhat.com/en/blog/how-deploy-red-hat-enterprise-linux-cloud"],
       ["  Red Hat blog: Identity management + SSO", "", "https://www.redhat.com/en/blog/integrating-identity-management-single-sign-red-hat-solutions"],
       ["  'AI-First Research Platform' acknowledged expert contributor", "", "https://medium.com/@dan.domkowski/the-ai-first-research-platform-merging-hpc-cloud-native-to-deliver-a-unified-research-foundation-cab1f9054974"],
