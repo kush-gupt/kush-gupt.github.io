@@ -58,6 +58,7 @@
       ["available commands:", "amber"],
       ["  whoami       who is this guy", ""],
       ["  experience   where he's worked", ""],
+      ["  achievements talks, press, open source", ""],
       ["  education    school", ""],
       ["  certs        alphabet soup, but earned", ""],
       ["  projects     things he's built", ""],
@@ -85,6 +86,25 @@
       ["              DOE team — HPC, science & space on OpenShift.", "dim"],
       ["              Helped NASA test AI for deep space missions.", "dim"],
       ["              National lab supercomputing (LLNL).", "dim"],
+      ["", ""],
+    ],
+    achievements: () => [
+      ["talks & stages", "amber"],
+      ["  Flight Software Workshop     Edge AI inferencing: llama.cpp vs vLLM", ""],
+      ["  HPSF Conference 2026         bootc + OpenCHAMI", ""],
+      ["  CANOPIE-HPC Workshop @ SC25  presenter", ""],
+      ["  NLIT Summit '25              Open source AI training with OSTI data", ""],
+      ["  Red Hat/Dynatrace/Intel      AI-driven observability webinar", ""],
+      ["", ""],
+      ["media & writing", "amber"],
+      ["  Federal News Network         'Building AI that works in government'", ""],
+      ["  Red Hat blog                 RHEL in the cloud: PAYG vs BYOS", ""],
+      ["  Red Hat blog                 Identity management + SSO", ""],
+      ["  'AI-First Research Platform' acknowledged expert contributor", ""],
+      ["", ""],
+      ["open source & community", "amber"],
+      ["  RamaLama                     shipped vllm-cpu-arm image, PR #1571", ""],
+      ["  Minority Programmers Assoc.  organized 2020 #BLM hackathon", ""],
       ["", ""],
     ],
     education: () => [
@@ -139,7 +159,7 @@
     quit: () => [["logout… just kidding. there's no escape.", "dim"], ["", ""]],
   };
 
-  const CHIPS = ["whoami", "experience", "certs", "projects", "personal", "contact", "help"];
+  const CHIPS = ["whoami", "experience", "achievements", "certs", "projects", "personal", "contact", "help"];
 
   function run(raw) {
     const cmd = raw.trim().toLowerCase();
