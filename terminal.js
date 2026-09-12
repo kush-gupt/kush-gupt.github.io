@@ -51,7 +51,6 @@
     ["KUSH-OS v2.6.9 — cold boot", "dim"],
     ["loading profile ............ OK", "dim"],
     ["mounting /dev/ambition ..... OK", "dim"],
-    ["starting databricks-agent ... OK", "dim"],
     ["", ""],
   ];
 
@@ -116,7 +115,6 @@
     personal: () => [
       ["fiancée ..... Kate", ""],
       ["dog ......... Ted (20 lbs of opinions)", ""],
-      ["car ......... 2012 Aston Martin Vantage V8 Roadster", ""],
       ["fuel ........ DoorDash, Delta SkyMiles", "dim"],
       ["status ...... wedding loading… ████████░░ 80%", "amber"],
       ["", ""],
