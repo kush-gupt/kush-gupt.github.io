@@ -106,7 +106,7 @@
       ["  Open source AI: RamaLama, Docling.", "dim"],
       ["", ""],
       ["[2021–2023] Associate Solution Architect, Red Hat", "white"],
-      ["  First job out of college. Trusted advisor.", "dim"],
+      ["  First job out of college. Trusted advisor to several civilian government agencies.", "dim"],
       ["", ""],
       ["[2020] Software Engineer Intern, Northrop Grumman", "white"],
       ["  Cloud migration, Azure zero-trust, Docker.", "dim"],
