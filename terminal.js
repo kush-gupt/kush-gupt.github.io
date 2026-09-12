@@ -80,7 +80,7 @@
       ["  stack        tools of the trade", ""],
       ["  personal     the human behind the keyboard", ""],
       ["  contact      how to reach him", ""],
-      ["  theme        toggle databricks / green phosphor", ""],
+      ["  theme        cycle databricks / gold / teal / green", ""],
       ["  clear        wipe the screen", ""],
       ["", ""],
     ],
@@ -204,22 +204,28 @@
     if (cmd === "clear") { output.innerHTML = ""; return; }
     if (cmd.startsWith("theme")) {
       const root = document.documentElement.style;
-      const cur = getComputedStyle(document.documentElement).getPropertyValue("--green").trim();
       const THEMES = {
-        databricks: {
-          "--green": "#FF3621", "--dim-green": "#8f2a1e",
-          "--glow-faint": "rgba(255,54,33,.08)", "--glow": "rgba(255,54,33,.35)",
-          "--glow-mid": "rgba(255,54,33,.2)", "--glow-strong": "rgba(255,54,33,.8)",
-        },
-        green: {
-          "--green": "#33ff66", "--dim-green": "#1a8f3c",
+        databricks: { label: "databricks lava", "--green": "#FF5F46", "--dim-green": "#9c3a2c",
+          "--glow-faint": "rgba(255,95,70,.08)", "--glow": "rgba(255,95,70,.35)",
+          "--glow-mid": "rgba(255,95,70,.2)", "--glow-strong": "rgba(255,95,70,.8)" },
+        gold: { label: "databricks gold", "--green": "#FFAB00", "--dim-green": "#8f6a1a",
+          "--glow-faint": "rgba(255,171,0,.08)", "--glow": "rgba(255,171,0,.35)",
+          "--glow-mid": "rgba(255,171,0,.2)", "--glow-strong": "rgba(255,171,0,.8)" },
+        teal: { label: "databricks teal", "--green": "#17B5C4", "--dim-green": "#1a6f78",
+          "--glow-faint": "rgba(23,181,196,.08)", "--glow": "rgba(23,181,196,.35)",
+          "--glow-mid": "rgba(23,181,196,.2)", "--glow-strong": "rgba(23,181,196,.8)" },
+        green: { label: "classic green", "--green": "#33ff66", "--dim-green": "#1a8f3c",
           "--glow-faint": "rgba(51,255,102,.08)", "--glow": "rgba(51,255,102,.35)",
-          "--glow-mid": "rgba(51,255,102,.2)", "--glow-strong": "rgba(51,255,102,.8)",
-        },
+          "--glow-mid": "rgba(51,255,102,.2)", "--glow-strong": "rgba(51,255,102,.8)" },
       };
-      const next = cur === "#FF3621" ? "green" : "databricks";
-      for (const [k, v] of Object.entries(THEMES[next])) root.setProperty(k, v);
-      line("phosphor: " + next, next === "databricks" ? "" : "");
+      const ORDER = ["databricks", "gold", "teal", "green"];
+      const cur = getComputedStyle(document.documentElement).getPropertyValue("--green").trim().toLowerCase();
+      const idx = ORDER.findIndex(k => THEMES[k]["--green"].toLowerCase() === cur);
+      const next = ORDER[(idx + 1) % ORDER.length];
+      for (const [k, v] of Object.entries(THEMES[next])) {
+        if (!k.startsWith("label")) root.setProperty(k, v);
+      }
+      line("phosphor: " + THEMES[next].label, "");
       line("", "");
       return;
     }
