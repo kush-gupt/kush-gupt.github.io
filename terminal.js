@@ -48,7 +48,6 @@
   }
 
   const BOOT = [
-    ["KUSH-OS v2.6.9 — cold boot", "dim"],
     ["loading profile ............ OK", "dim"],
     ["mounting /dev/ambition ..... OK", "dim"],
     ["", ""],
