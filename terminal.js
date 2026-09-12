@@ -69,19 +69,22 @@
       ["", ""],
     ],
     whoami: () => [
-      ["Kush Gupta — everyone calls me Kush.", "white"],
+      ["Kushal Gupta — everyone calls me Kush.", "white"],
       ["Solutions Architect @ Databricks", ""],
-      ["Federal Civilian team.", "dim"],
-      ["Atlanta, GA", "dim"],
+      ["Federal Civilian team. Data + AI for government agencies.", "dim"],
+      ["Atlanta, GA · linkedin.com/in/kushsgupta", "dim"],
       ["", ""],
     ],
     experience: () => [
       ["2026 – now    Solutions Architect, Databricks", "white"],
       ["              Pre-sales. Federal Civilian.", "dim"],
+      ["              Data + AI for government agencies. Started July 2026.", "dim"],
       ["", ""],
       ["2021 – 2026   Solutions Architect, Red Hat", "white"],
       ["              First job out of college. Five years.", "dim"],
       ["              DOE team — HPC, science & space on OpenShift.", "dim"],
+      ["              Helped NASA test AI for deep space missions.", "dim"],
+      ["              National lab supercomputing (LLNL).", "dim"],
       ["", ""],
     ],
     education: () => [
@@ -120,6 +123,7 @@
     ],
     contact: () => [
       ["github      github.com/kush-gupt", "white"],
+      ["linkedin    linkedin.com/in/kushsgupta", "white"],
       ["", ""],
     ],
     date: () => [[new Date().toString(), ""] , ["", ""]],
