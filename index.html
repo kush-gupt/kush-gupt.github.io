@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kush@atl:~$</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="crt"></div>
+<main class="window" id="window">
+  <div class="titlebar">
+    <div class="lights">
+      <span class="light red"></span>
+      <span class="light yellow"></span>
+      <span class="light green"></span>
+    </div>
+    <div class="title">kush@atl: ~</div>
+    <div class="spacer"></div>
+  </div>
+  <div class="screen" id="screen">
+    <div id="output"></div>
+    <div class="input-line">
+      <span class="prompt" id="prompt">kush@atl:~$</span>
+      <span class="typed" id="typed"></span><span class="caret"></span>
+      <input id="hidden-input" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="terminal input">
+    </div>
+  </div>
+  <div class="chips" id="chips"></div>
+</main>
+<script src="terminal.js"></script>
+</body>
+</html>
